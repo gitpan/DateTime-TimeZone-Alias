@@ -1,6 +1,7 @@
-use Test::More tests => 4;
-
 use strict;
+use warnings;
+
+use Test::More tests => 4;
 
 use DateTime;
 use DateTime::TimeZone;

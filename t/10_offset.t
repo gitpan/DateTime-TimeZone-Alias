@@ -1,6 +1,7 @@
-use Test::More tests => 133;
-
 use strict;
+use warnings;
+
+use Test::More tests => 133;
 
 use DateTime::TimeZone::Alias;
 

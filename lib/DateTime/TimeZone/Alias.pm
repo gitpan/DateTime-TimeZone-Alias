@@ -6,7 +6,7 @@ use Carp qw( croak );
 use DateTime::TimeZoneCatalog;
 
 use vars qw( $VERSION );
-$VERSION = 0.05;
+$VERSION = 0.0501;
 
 sub import {
     my $class = shift;
@@ -39,7 +39,7 @@ sub set {
         		my $sign	= $1 || '+';
     		my $hours	= $2;
     		my $minutes	= $3;
-    		my $seconds	= sprintf( "%02d", $4 );
+    		my $seconds	= sprintf( "%02d", $4 || 0 );
 
     		$DateTime::TimeZone::LINKS{ $key } = "$sign$hours:$minutes:$seconds";
     	} else {
@@ -114,7 +114,7 @@ sub is_alias {
 sub is_timezone {
     my( $class, $tz_candidate ) = @_;
 
-    if ( grep( /^${tz_candidate}$/, @DateTime::TimeZone::ALL ) ) {
+    if ( grep( /^\Q${tz_candidate}\E$/, @DateTime::TimeZone::ALL ) ) {
     	return 1;
     } else {
     	return undef;

@@ -1,5 +1,9 @@
 Revision history for Perl module DateTime::TimeZone::Alias
 
+0.0501 Sun May 16 15:08:21 HST 2004
+    - fix new warnings
+    - minor test cleanup
+
 0.05 Sun Jul 20 21:30:57 HST 2003
     - floating, local, UTC, Z, and offsets can now be aliased
     - docs updated
