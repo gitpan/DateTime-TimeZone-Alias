@@ -6,7 +6,7 @@ use Carp qw( croak );
 use DateTime::TimeZoneCatalog;
 
 use vars qw( $VERSION );
-$VERSION = 0.03;
+$VERSION = 0.04;
 
 sub import {
 	my $class = shift;
@@ -19,7 +19,7 @@ sub import {
 sub set {
 	my $class = shift;
 
-	return unless @_;
+	croak "Can't be called without any parameters" unless @_;
 
 	my %p = @_;
 
@@ -38,7 +38,7 @@ sub set {
 sub add {
 	my $class = shift;
 
-	return unless @_;
+	croak "Can't be called without any parameters" unless @_;
 
 	my %p = @_;
 
@@ -62,6 +62,16 @@ sub remove {
 		}
 
 		delete $DateTime::TimeZone::LINKS{ $key };
+	}
+}
+
+sub value {
+	my( $class, $key ) = @_;
+
+	if ( $class->is_alias( $key ) ) {
+		return $DateTime::TimeZone::LINKS{ $key };
+	} else {
+		return undef;
 	}
 }
 
