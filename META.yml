@@ -1,16 +1,16 @@
 --- #YAML:1.0
 name: DateTime-TimeZone-Alias
-version: 0.04
+version: 0.05
 license: perl
 distribution_type: module
 requires:
   DateTime: 0
-  DateTime::TimeZone: 0
+  DateTime::TimeZone: 0.25
 recommends: {}
 build_requires: {}
 conflicts: {}
 provides:
   DateTime::TimeZone::Alias:
     file: lib/DateTime/TimeZone/Alias.pm
-    version: 0.04
-generated_by: Module::Build version 0.18
+    version: 0.05
+generated_by: Module::Build version 0.19
