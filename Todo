@@ -1,0 +1,3 @@
+TODO list for Perl module DateTime::TimeZone::Alias
+
+- Support aliasing entries in the LINKS hash
