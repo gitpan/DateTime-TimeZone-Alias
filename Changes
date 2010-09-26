@@ -1,5 +1,9 @@
 Revision history for Perl module DateTime::TimeZone::Alias
 
+0.06 Sat Sep 25 17:47:05 MST 2010
+    - update to handle DateTime::TimeZoneCatalog ->
+      DateTime::TimeZone::Catalog rename
+
 0.0501 Sun May 16 15:08:21 HST 2004
     - fix new warnings
     - minor test cleanup

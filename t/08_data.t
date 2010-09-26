@@ -10,13 +10,13 @@ use DateTime::TimeZone::Alias;
     my $als = DateTime::TimeZone::Alias->aliases();
 
     is_deeply(
-        \@DateTime::TimeZone::ALL,
+        \@DateTime::TimeZone::Catalog::ALL,
         $tzs,
         "compare returned timezones with internals"
     );
 
     is_deeply(
-        \%DateTime::TimeZone::LINKS,
+        \%DateTime::TimeZone::Catalog::LINKS,
         $als,
         "compare returned aliases with internals"
     );

@@ -1,14 +1,22 @@
---- #YAML:1.0
-name: DateTime-TimeZone-Alias
-version: 0.0501
-author: ~
-abstract: ~
+---
+abstract: 'Create aliases for DateTime timezones'
+author:
+  - 'Joshua Hoblitt <jhoblitt@cpan.org>'
+configure_requires:
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3607'
 license: perl
-requires:
-  DateTime: 0
-  DateTime::TimeZone: 0.25
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: DateTime-TimeZone-Alias
 provides:
   DateTime::TimeZone::Alias:
     file: lib/DateTime/TimeZone/Alias.pm
-    version: 0.0501
-generated_by: Module::Build version 0.25
+    version: 0.06
+requires:
+  DateTime: 0
+  DateTime::TimeZone::Catalog: 0
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.06

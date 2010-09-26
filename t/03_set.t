@@ -42,7 +42,7 @@ DateTime::TimeZone::Alias->set( zulu => 'UTC', home => 'local', boat => 'floatin
 
 {
     my $dttz = DateTime::TimeZone->new( name => 'home' );
-    my $ltz = DateTime::TimeZone::Local::local_time_zone();
+    my $ltz = DateTime::TimeZone::Local->TimeZone();
     is( $dttz->name, $ltz->name );
 }
 
